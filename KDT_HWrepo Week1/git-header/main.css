@@ -2,11 +2,22 @@ body {
     margin: 0;
     padding: 0;
 }
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
 .header {
     width: 100%;
 }
 .container {
-    width: 980px;
+    width: 90%;
     margin: auto;
 }
 .container-left {
@@ -31,6 +42,8 @@ body {
     float: left;
     padding: 8px 10px;
 }
+
+
 
 .clearfix::after {
     content: "";
