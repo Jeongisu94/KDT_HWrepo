@@ -43,8 +43,6 @@ a:visited {
     padding: 8px 10px;
 }
 
-
-
 .clearfix::after {
     content: "";
     display: block;
