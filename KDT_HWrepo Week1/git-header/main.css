@@ -1,12 +1,42 @@
 body {
     margin: 0;
     padding: 0;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+    color:white;
+
 }
+
+a:link {
+    text-decoration: none;
+    color:white;
+}
+
+a:visited {
+    text-decoration: none;
+    color:white;
+}
+
+button {
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.5em;
+    color:white;
+}
+
+button:hover { /*cursor on button */
+/* TODO */
+
+}
+
+
 .header {
     width: 100%;
 }
 .container {
-    width: 980px;
+    width: 90%;
     margin: auto;
 }
 .container-left {
