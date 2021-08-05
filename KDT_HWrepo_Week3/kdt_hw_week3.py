@@ -71,4 +71,5 @@ for row in crawledData.iter_rows():
         contents = contents + " "+ str(cell.value)
     contents += '\n'
 
-print(contents)
+for name , mail in receivers:
+    send_mail(name,mail,'Naver News : ',contents)
