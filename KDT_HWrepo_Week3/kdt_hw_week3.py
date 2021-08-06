@@ -6,8 +6,8 @@ import re #regular expression
 
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 465
-SMTP_USER = 'oi56629@gmail.com'
-SMTP_PASSWORD = '2osQwCg2dn'
+SMTP_USER = ''
+SMTP_PASSWORD = ''
 
 def send_mail(name, addr, subject, contents, attachment=None):
     if not re.match('(^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)', addr):
