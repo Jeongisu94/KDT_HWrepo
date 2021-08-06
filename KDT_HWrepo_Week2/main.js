@@ -14,14 +14,16 @@ const data = [
 
 // 사용자 입력 받기
 const line = prompt('최대 금액을 입력해주세요.');
-const amount = parseInt(line)
+const amount = +line;
+
+
 
 // 주어진 금액으로 살 수 있는 가장 비싼 상품을 구함
 const item = getItemByAmount(data, amount);
 
 const msg = item ?
     `${amount}원으로 살 수 있는 가장 비싼 상품은 [${item.name}]이고, 가격은 ${item.price}원입니다.` :
-    `살 수 있는 상품이 없습니다.`;
+    '살 수 있는 상품이 없습니다.';
 
 // 결과 출력
 alert(msg);
@@ -30,10 +32,14 @@ alert(msg);
 
 function getItemByAmount(data, amount) {
     let tempItem = 0;
+
     data.forEach(item => {
-        if (item.price < amount && tempItem === 0 || item.price <= amount && item.price >= tempItem.price ) { // 아이템이 안들어와있는 경우 살 수 있는것 찾음
+        if (item.price < amount && tempItem === 0) { // 아이템이 안들어와있는 경우 살 수 있는것 찾음
+            tempItem = item;
+        } else if (item.price <= amount && item.price >= tempItem.price ) { // 아이템이 들어와있는 경우 가장 비싼것을 찾음
             tempItem = item;
         }
     })
+
     return tempItem;
 }
