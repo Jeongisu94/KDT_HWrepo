@@ -58,6 +58,7 @@ for names, emails  in zip (data.iter_rows(min_row=3,min_col=2, max_col=2),data.i
         tempReceive = [name.value,email.value]
         receivers.append(tempReceive)
 
+
 #from NaverNewsCrawler import NaverNewsCrawler
 #crawler = NaverNewsCrawler("패스트 캠퍼스") # 네이버뉴스에서 데이터 크롤링
 #crawler.get_news("data.xlsx")
